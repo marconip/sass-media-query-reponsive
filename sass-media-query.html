@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="scss/style.css">
+
+    <title>Sass media query</title>
+</head>
+
+<body>
+
+    <header class="container mt-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-4">Sass media query reponsive</h1>
+                <h4 class="text-dark">How to use the responsive breakpoints from Sass mixins</h4>
+                <p class="mb-3">Resize your browser screen to see resolution. If the resolution is...</p>
+
+                <button type="button" class="btn btn-outline-info mb-2 btn-maior">equal to or greater than</button>
+                <button type="button" class="btn btn-outline-info mb-2 btn-menor">equal to or less than</button>
+                <button type="button" class="btn btn-outline-info mb-2 btn-entre">between</button>
+            </div>
+        </div>
+    </header>
+
+    <hr class="my-4">
+
+    <div class="container media-acima">
+        <div class="row text-center mb-4">
+            <div class="col-12 grid-1200 text-info">
+                <h2 class="display-1">1200px<i class="fas fa-long-arrow-alt-right"></i></h2>
+                <p>use the @include</p>
+                <h3 class="display-4">(xl-up)</h3>
+                <p><i class="fas fa-desktop"></i> desktops grandes</p>
+            </div>
+            <div class="col-12 grid-992 text-success">
+                <h2 class="display-1">992px<i class="fas fa-long-arrow-alt-right"></i></h2>
+                <p>use the @include</p>
+                <h3 class="display-4">(lg-up)</h3>
+                <p><i class="fas fa-desktop"></i> desktops</p>
+            </div>
+            <div class="col-12 grid-768 text-primary">
+                <h2 class="display-1">768px<i class="fas fa-long-arrow-alt-right"></i></h2>
+                <p>use the @include</p>
+                <h3 class="display-4">(md-up)</h3>
+                <p><i class="fas fa-tablet-alt"></i> tablets</p>
+            </div>
+            <div class="col-12 grid-576 text-dark">
+                <h2 class="display-1">576px<i class="fas fa-long-arrow-alt-right"></i></h2>
+                <p>use the @include</p>
+                <h3 class="display-4">(sm-up)</h3>
+                <p><i class="fas fa-mobile-alt"></i> cell phones</p>
+            </div>
+            <div class="col-12 grid-576menor text-danger">
+                <h2 class="display-1">575.98px</h2>
+                <p>don't use the @include</p>
+                <h3>Not required for less than "576px" because it starts at 0px </h3>
+                <p><i class="fas fa-mobile-alt"></i> cell phones</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container media-abaixo">
+        <div class="row text-center mb-4">
+            <div class="col-12 grid-1200 text-info">
+                <h2 class="display-1">1200px</h2>
+                <p>don't use the @include</p>
+                <h3>Not required for more than "1199px"</h3>
+                <p><i class="fas fa-desktop"></i> large desktops </p>
+            </div>
+            <div class="col-12 grid-992 text-success">
+                <h2 class="display-1"><i class="fas fa-long-arrow-alt-left"></i>1199.98px</h2>
+                <p>use the @include</p>
+                <h3 class="display-4">(lg-down)</h3>
+                <p><i class="fas fa-desktop"></i> desktops</p>
+            </div>
+            <div class="col-12 grid-768 text-primary">
+                <h2 class="display-1"><i class="fas fa-long-arrow-alt-left"></i>991.98px</h2>
+                <p>use the @include</p>
+                <h3 class="display-4">(md-down)</h3>
+                <p><i class="fas fa-tablet-alt"></i> tablets</p>
+            </div>
+            <div class="col-12 grid-576 text-dark">
+                <h2 class="display-1"><i class="fas fa-long-arrow-alt-left"></i>767.98px</h2>
+                <p>use the @include</p>
+                <h3 class="display-4">(sm-down)</h3>
+                <p><i class="fas fa-mobile-alt"></i> cell phones</p>
+            </div>
+            <div class="col-12 grid-576menor text-danger">
+                <h2 class="display-1"><i class="fas fa-long-arrow-alt-left"></i>575.98px</h2>
+                <p>use the @include</p>
+                <h3 class="display-4">(xs-down)</h3>
+                <p><i class="fas fa-mobile-alt"></i> cell phones</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container media-entre">
+        <div class="row text-center mb-4">
+            <div class="col-12 grid-1200 text-info">
+                <h2 class="display-1">1200px<i class="fas fa-long-arrow-alt-right"></i></h2>
+                <p>use the @include</p>
+                <h3 class="display-4">(xl-up)</h3>
+                <p><i class="fas fa-desktop"></i> large desktops </p>
+            </div>
+            <div class="col-12 grid-992 text-success">
+                <h2 class="display-2">992px <i class="fas fa-exchange-alt"></i> 1199.98px</h2>
+                <p>use the @include</p>
+                <h3 class="display-4">(lg)</h3>
+                <p><i class="fas fa-desktop"></i> desktops</p>
+            </div>
+            <div class="col-12 grid-768 text-primary">
+                <h2 class="display-1">768px <i class="fas fa-exchange-alt"></i> 991.98px</h2>
+                <p>use the @include</p>
+                <h3 class="display-4">(md)</h3>
+                <p><i class="fas fa-tablet-alt"></i> tablets</p>
+            </div>
+            <div class="col-12 grid-576 text-dark">
+                <h2 class="display-1">576px <i class="fas fa-exchange-alt"></i> 767.98px</h2>
+                <p>use the @include</p>
+                <h3 class="display-4">(sm)</h3>
+                <p><i class="fas fa-mobile-alt"></i> cell phones</p>
+            </div>
+            <div class="col-12 grid-576menor text-danger">
+                <h2 class="display-1">0px <i class="fas fa-exchange-alt"></i> 575.98px</h2>
+                <p>use the @include</p>
+                <h3 class="display-4">(xs-down)</h3>
+                <p><i class="fas fa-mobile-alt"></i> cell phones</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row bg-white rounded mb-5 py-4">
+            <div
+                class="col-12 text-center d-flex align-items-center justify-content-md-around align-items-stretch exemplo">
+                <div class="tags">
+                    <h4 class="text-dark mb-3">practical example</h4>
+                    <div class="text-left">
+                        <p><span class="verde">.exemplo-class</span> {</p>
+                        <p class="pl-4"><span class="roxo">display</span>: none;</p>
+                        <p class="pl-4"><span class="azul">@include</span> <span
+                                class="roxo">media(<strong></strong>)</span> {</p>
+                        <p class="pl-5"><span class="roxo pl-2">display</span>: block;</p>
+                        <p class="pl-4">}</p>
+                        <p>}</p>
+                        <p class="text-dark">You can also use multiple @include:</p>
+                        <p><span class="azul">@include</span> <span class="roxo">media(<i class="text-dark">xs-down,
+                                    lg</i>)</span> {...}</p>
+                    </div>
+                </div>
+
+                <div class="tags media-acima">
+                    <h4 class="text-dark mb-3">equal to or greater then</h4>
+                    <p class="m575">0px<span></span></p>
+                    <p class="m576"><span>sm-up</span> = 576px</p>
+                    <p class="m768"><span>md-up</span> = 768px</p>
+                    <p class="m992"><span>lg-up</span> = 992px</p>
+                    <p class="m1200"><span>xl-up</span> = 1200px</p>
+                </div>
+                <div class="tags media-abaixo">
+                    <h4 class="text-dark mb-3">equal to or less than</h4>
+                    <p class="m575"><span>xs-down</span> = 575.98px</p>
+                    <p class="m576"><span>sm-down</span> = 767.98px</p>
+                    <p class="m768"><span>md-down</span> = 991.98px</p>
+                    <p class="m992"><span>lg-down</span> = 1199.98px</p>
+                    <p class="m1200"><span></span> 1200px </p>
+                </div>
+                <div class="tags media-entre">
+                    <h4 class="text-dark mb-3">between</h4>
+                    <p class="m575"><span>xs-down</span> = 0px - 575.98px</p>
+                    <p class="m576"><span>sm</span> = 576px - 767.98px</p>
+                    <p class="m768"><span>md</span> = 768px - 991.98px</p>
+                    <p class="m992"><span>lg</span> = 992px - 1199.98px</p>
+                    <p class="m1200"><span>xl-up</span> = 1200px up</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-4">
+
+    <footer class="container-fluid mb-4 text-center">
+        <a href="https://getbootstrap.com/docs/4.3/layout/overview/#responsive-breakpoints" target="_blank"
+            rel="noopener" class="text-info">
+            Reference Bootstrap responsive breakpoints <i class="fas fa-external-link-alt"></i>
+        </a>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
