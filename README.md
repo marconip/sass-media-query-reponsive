@@ -11,3 +11,6 @@ Demo view
 </a>
 
 I hope you enjoy it
+
+
+![screencapture-media-queries](https://raw.githubusercontent.com/marconip/sass-media-query-reponsive/master/screencapture-media-queries.png)
